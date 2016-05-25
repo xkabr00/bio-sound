@@ -9,6 +9,7 @@ int sensorMax = 10;
 int touch_sensorMin = 70;
 int touch_sensorMax = 500;
 
+const int scale_size = 6;
 const int scale_change_interval = 3000;
 int tones_offset = 0;
 long last_millis;
@@ -71,7 +72,7 @@ void loop() {
   if (moisture_val > 0) {
     
     //Mapování výšky tónů a intenzity LED na dotek
-    toneValue = map(moisture_val, sensorMin, sensorMax, tones_offset * 6, (tones_offset * 6) + 6);
+    toneValue = map(moisture_val, sensorMin, sensorMax, tones_offset * scale_size, (tones_offset * scale_size) + scale_size);
     ledValue = map(moisture_val, sensorMin, sensorMax, 0, 1023);
 
     //pin8 - piezo, pin9 - LED
