@@ -21,7 +21,6 @@ const int tones [] = {NOTE_C4, NOTE_DS4, NOTE_F4, NOTE_FS4, NOTE_G4, NOTE_B4,
 
 //Velikost zaokrouhlení pro vstup z vlhkostního senzoru
 const int measuresCount = 10;
-
 //const int tonesCount = sizeof(tones) / sizeof(tones[0]);
 
 void setup() {
